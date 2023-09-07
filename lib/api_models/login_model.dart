@@ -6,7 +6,6 @@ part 'login_model.g.dart';
 @JsonSerializable(explicitToJson: true)
 class LoginModel {
 
-  // @JsonKey(name : '_id')
   String email;
   String password;
 

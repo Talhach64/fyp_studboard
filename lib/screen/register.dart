@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:student_board/demo/page_view_demo.dart';
 import 'package:student_board/screen/create_account/register_parent.dart';
 import 'package:student_board/widget/img.dart';
-
 import '../constant/constant.dart';
 import 'create_account/register_student.dart';
-import 'login.dart';
 
 class Register extends StatelessWidget {
   const Register({Key? key}) : super(key: key);
@@ -88,21 +85,6 @@ class Register extends StatelessWidget {
                   style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),
                 ),
               ),
-              // SizedBox(height: 20.0),
-              // ElevatedButton(
-              //   onPressed: () {},
-              //   style: ElevatedButton.styleFrom(
-              //     backgroundColor:  primaryColor,
-              //     fixedSize: const Size(100, 40),
-              //     shape: RoundedRectangleBorder(
-              //       borderRadius: BorderRadius.circular(8.0),
-              //     ),
-              //   ),
-              //   child: const Text(
-              //     'SIGN IN',
-              //     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
-              //   ),
-              // ),
             ],
           ),
         ),

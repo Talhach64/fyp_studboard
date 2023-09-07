@@ -3,7 +3,6 @@ import 'package:student_board/widget/loading_icon.dart';
 import 'package:student_board/widget/text_widget.dart';
 import '../../constant/constant.dart';
 import '../../widget/img.dart';
-import '../../widget/pass_widget.dart';
 
 class RegisterParent extends StatefulWidget {
   const RegisterParent({Key? key}) : super(key: key);

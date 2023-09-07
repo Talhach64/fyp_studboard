@@ -99,7 +99,6 @@ class _RegisterStudentState extends State<RegisterStudent> {
         ),
       );
       List<dynamic> data = response.data;
-      print(data);
       session = (data).map((e) => SessionsModel.fromJson(e)).toList();
       setState(() {});
     } catch (error) {
@@ -121,11 +120,7 @@ class _RegisterStudentState extends State<RegisterStudent> {
         ),
       );
       List<dynamic> data = response.data;
-      print(response.data);
-      print("here is error");
       sections = (data).map((e) => SectionsModel.fromJson(e)).toList();
-      print("error");
-
       setState(() {});
     } catch (error) {
       print(error);
@@ -157,10 +152,6 @@ class _RegisterStudentState extends State<RegisterStudent> {
         ),
       );
       emailCheck = true;
-
-      print("---------1--------");
-      print(response.data);
-      print("-------2-----------");
       return response.data['email'];
     } catch (e) {
       print(e);
@@ -190,7 +181,6 @@ class _RegisterStudentState extends State<RegisterStudent> {
                 children: [
                   SingleChildScrollView(
                     child: Container(
-                      // padding: const EdgeInsets.all(20.0),
                       child: Column(
                         children: [
                           const Img(),
@@ -246,7 +236,7 @@ class _RegisterStudentState extends State<RegisterStudent> {
                               ),
                             ),
                           ),
-                          SizedBox(height: 15),
+                          const SizedBox(height: 15),
                           Container(
                             margin:
                                 const EdgeInsets.symmetric(horizontal: 20.0),
@@ -257,7 +247,7 @@ class _RegisterStudentState extends State<RegisterStudent> {
                                 border: Border.all(width: 1)),
                             child: DropdownButtonHideUnderline(
                               child: DropdownButton<ProgramsModel>(
-                                hint: Text(
+                                hint: const Text(
                                   'Programs',
                                   style: TextStyle(
                                     color: primaryColor,
@@ -295,7 +285,7 @@ class _RegisterStudentState extends State<RegisterStudent> {
                               ),
                             ),
                           ),
-                          SizedBox(height: 15),
+                          const SizedBox(height: 15),
                           Container(
                             margin:
                                 const EdgeInsets.symmetric(horizontal: 20.0),
@@ -341,7 +331,7 @@ class _RegisterStudentState extends State<RegisterStudent> {
                               ),
                             ),
                           ),
-                          SizedBox(height: 15),
+                          const SizedBox(height: 15),
                           Container(
                             margin:
                                 const EdgeInsets.symmetric(horizontal: 20.0),
@@ -384,7 +374,7 @@ class _RegisterStudentState extends State<RegisterStudent> {
                               ),
                             ),
                           ),
-                          SizedBox(height: 15),
+                          const SizedBox(height: 15),
                           ElevatedButton(
                             onPressed: () {
                               if (selectedDepartment != null &&
@@ -593,7 +583,7 @@ class _RegisterStudentState extends State<RegisterStudent> {
                               ),
                             ),
                           ),
-                          SizedBox(height: 10),
+                          const SizedBox(height: 10),
                           Padding(
                             padding:
                                 const EdgeInsets.symmetric(horizontal: 20.0),
@@ -643,7 +633,7 @@ class _RegisterStudentState extends State<RegisterStudent> {
                               ),
                             ),
                           ),
-                          SizedBox(height: 10),
+                          const SizedBox(height: 10),
                           ElevatedButton(
                             // 2k19bscs340@undergrad.nfciet.edu.pk
                             onPressed: () async {
@@ -675,7 +665,7 @@ class _RegisterStudentState extends State<RegisterStudent> {
                                                       Navigator.push(
                                                           context,
                                                           MaterialPageRoute(
-                                                              builder: (context) =>  Login()));
+                                                              builder: (context) =>  const Login()));
                                                     },
                                                     style: ElevatedButton.styleFrom(
                                                       backgroundColor: primaryColor,

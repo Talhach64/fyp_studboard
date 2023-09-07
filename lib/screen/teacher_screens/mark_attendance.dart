@@ -54,8 +54,6 @@ class _MarkAttendanceState extends State<MarkAttendance> {
   Future<void> fetch() async {
     var user = await APIService().getOne("get-user");
     teacherData = TeacherModel.fromJson(user);
-    // print(teacherData!.subjects[1].subject.department.id);
-
     setState(() {});
   }
 
@@ -71,11 +69,7 @@ class _MarkAttendanceState extends State<MarkAttendance> {
         ),
       );
       List<dynamic> data = response.data;
-      print(response.data);
-      print("here is error");
       sections = (data).map((e) => SectionsModel.fromJson(e)).toList();
-      print("error");
-
       setState(() {});
     } catch (error) {
       print(error);

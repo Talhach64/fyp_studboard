@@ -1,5 +1,4 @@
 // ignore_for_file: use_build_context_synchronously
-
 import 'package:flutter/material.dart';
 import 'package:student_board/api_models/login_model.dart';
 import 'package:student_board/api_models/user_model.dart';
@@ -28,13 +27,6 @@ class _LoginState extends State<Login> {
   TextEditingController passwordController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
   AutovalidateMode autoValidateMode = AutovalidateMode.disabled;
-
-  @override
-  void initState() {
-    emailController.text = "khilji@nfciet.edu.pk";
-    passwordController.text = "12345678";
-    super.initState();
-  }
 
   @override
   void dispose() {

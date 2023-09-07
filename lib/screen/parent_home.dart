@@ -1,10 +1,8 @@
-import 'package:dio/dio.dart';
+
 import 'package:flutter/material.dart';
 import 'package:student_board/api_models/student_models.dart';
 import 'package:student_board/api_models/user_model.dart';
 import 'package:student_board/screen/parent_searched.dart';
-import 'package:student_board/widget/text_widget.dart';
-
 import '../api_services/api_services.dart';
 import '../constant/constant.dart';
 import '../widget/list_tile.dart';
@@ -222,17 +220,6 @@ class _ParentHomeState extends State<ParentHome> {
                             title: Text(e.name),
                             subtitle: Text(e.rollNo),
                           )),
-
-                    // ListView.builder(
-                    //   shrinkWrap: true,
-                    //     physics: const NeverScrollableScrollPhysics(),
-                    //     itemCount: student.length,
-                    //     itemBuilder: (ctx,i){
-                    //   return  ListTile(
-                    //     title: Text(student[i].name),
-                    //     subtitle: Text(student[i].rollNo),
-                    //   );
-                    // })
                   ],
                 ),
               ),

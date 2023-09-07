@@ -18,8 +18,6 @@ class TeacherHome extends StatefulWidget {
 class _TeacherHomeState extends State<TeacherHome> {
   TeacherModel? teacherData;
   List<Subject>? subject = [];
-   // Currently selected drawer item index
-
   @override
   void initState() {
     fetch();
@@ -80,11 +78,6 @@ class _TeacherHomeState extends State<TeacherHome> {
                       builder: (context) =>  const AttendanceRecords()));
                 },
               ),
-              // const MyListTile(
-              //
-              //   label: Text('Result Records'),
-              //   Icon: Icon(Icons.auto_graph),
-              // ),
               const Divider(height: 0),
               MyListTile(
                 label: const Text('Log Out'),

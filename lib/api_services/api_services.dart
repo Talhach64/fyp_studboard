@@ -1,12 +1,9 @@
-import 'dart:convert';
 import 'package:dio/dio.dart';
 import 'package:hive/hive.dart';
 
-import '../api_models/dpss_models.dart';
-
 class APIService {
   final Dio _dio = Dio();
-  final apiUrl = "https://nfc-master-api.onrender.com/api" ;
+  final apiUrl = "https://nfc-master-api.onrender.com/api";
 
   Future<void> setToken(String token) async {
     final box = await Hive.openBox('auth');
@@ -65,7 +62,6 @@ class APIService {
     }
   }
 
-
   Future<dynamic>? getOne(String route) async {
     try {
       Response response = await _dio.get(
@@ -77,9 +73,6 @@ class APIService {
           },
         ),
       );
-      // print("done");
-      // print(response.data);
-      // print("done");
 
       switch (response.statusCode) {
         case 200:
@@ -99,7 +92,7 @@ class APIService {
     }
   }
 
-  Future<dynamic> post(route,Map<String, dynamic> data) async {
+  Future<dynamic> post(route, Map<String, dynamic> data) async {
     Response res = await _dio.post(
       "$apiUrl/$route",
       data: data,
@@ -110,11 +103,6 @@ class APIService {
         },
       ),
     );
-
-
-    print(res);
-
-
     switch (res.statusCode) {
       case 200:
         return res.data;
@@ -143,13 +131,6 @@ class APIService {
           },
         ),
       );
-
-
-      print(res.data);
-      print(res.statusMessage);
-      print(res.statusCode);
-
-
       switch (res.statusCode) {
         case 200:
           return res.data;
